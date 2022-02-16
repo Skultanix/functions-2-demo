@@ -86,6 +86,21 @@ const catProducts = [
 
 // CODE HERE
 
+const applyPercentDiscount = (product, discount) => {
+    product.displayPrice = product.basePrice * (1 - discount)
+}
+
+const applyFlatRateDiscount = (product, discount) => {
+    product.displayPrice = product.basePrice - discount
+}
+
+const applyDiscounts = (arr, callback, discount) => {
+    arr.forEach(product => {
+        callback(product, discount)
+    })
+}
+
+applyDiscounts(catProducts, applyFlatRateDiscount, 5)
 
 
 ////////////////////////
