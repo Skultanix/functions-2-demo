@@ -4,6 +4,27 @@
 
 // CODE HERE
 
+const add = (num1, num2) => num1 + num2
+
+const subtract = (num1, num2) => num1 - num2
+
+const multiply = (num1, num2) => num1 * num2
+
+const divide = (num1, num2) => num1 / num2
+
+const calculator = (num1, num2, operation) => {
+    //determine if num values are numbers
+    if(+num1 && +num2) {
+        // make sure that num values are numbers and run them through an operator function.
+        num1 = +num1 
+        num2 = +num2
+        return operation(num1,num2)
+    } else {
+        console.log(`Numbers only please.`)
+}
+}
+// Function test.
+//console.log(calculator(2, 11, add))
 
 ///////////////////////
 ////// PET STORE //////
